@@ -181,10 +181,12 @@
   /* Override typography plugin link styles */
   .prose a {
     color: var(--accent);
+    text-decoration: none;
   }
 
   .prose a:hover {
     color: var(--accent-dark);
+    text-decoration: underline;
   }
 
   /* Ensure all links use accent color */
