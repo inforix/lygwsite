@@ -8,10 +8,7 @@ module.exports = {
           css: {
             fontSize: '1em',
             fontFamily: '"PingFang SC", "Microsoft YaHei", sans-serif;',
-            a:{
-              color: '#00c',
-              textDecoration: 'none',
-            },
+            
             h1:{
               color: '#039',
             },
