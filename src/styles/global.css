@@ -65,7 +65,7 @@
   }
 
   h3 {
-    font-size: 1.953em;
+    font-size: 1.953em !important;
   }
 
   h4 {
@@ -176,6 +176,7 @@
 
   .prose p {
     margin-bottom: 2em;
+    line-height: 2.5;
   }
 
   /* Override typography plugin link styles */
@@ -200,6 +201,38 @@
   main a:hover,
   p a:hover {
     color: var(--accent-dark);
+  }
+
+  .prose strong {
+    color: var(--accent-dark);
+  }
+
+  /* Reference items styling */
+  .reference-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .reference-item * {
+    display: inline;
+  }
+
+  .reference-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+  }
+
+  .reference-text-container {
+    display: inline;
+  }
+
+  .reference-link {
+    display: inline;
+    margin-left: 0.5em;
   }
 }
 

@@ -7,7 +7,7 @@ module.exports = {
         DEFAULT: {
           css: {
             fontSize: '1em',
-            fontFamily: '"PingFang SC", "Microsoft YaHei", sans-serif;',
+            fontFamily: 'font-family: Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, "PingFang SC", Cambria, Cochin, Georgia, Times, "Times New Roman", sans-serif;',
             
             h1:{
               color: '#039',
