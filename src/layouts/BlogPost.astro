@@ -43,11 +43,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				font-style: italic;
 			}
 		</style>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	</head>
 
 	<body>
 		<Header />
-		<main>
+		<main class="prose">
 			<article>
 				<div class="w-full lg:max-w-4xl mx-auto">
 					<div class="max-w-xl mx-auto">
