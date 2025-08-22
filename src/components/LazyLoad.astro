@@ -1,0 +1,72 @@
+---
+interface Props {
+  threshold?: number;
+  rootMargin?: string;
+  class?: string;
+}
+
+const { 
+  threshold = 0.1, 
+  rootMargin = '50px',
+  class: className = ''
+} = Astro.props;
+---
+
+<div 
+  class={`lazy-load ${className}`}
+  data-threshold={threshold}
+  data-root-margin={rootMargin}
+>
+  <slot />
+</div>
+
+<script>
+  // Intersection Observer for lazy loading
+  function initLazyLoad() {
+    const lazyElements = document.querySelectorAll('.lazy-load');
+    
+    if ('IntersectionObserver' in window) {
+      const lazyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+            element.classList.add('loaded');
+            
+            // Trigger custom event for components that need it
+            element.dispatchEvent(new CustomEvent('lazy-loaded'));
+            
+            lazyObserver.unobserve(element);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '50px'
+      });
+      
+      lazyElements.forEach(el => lazyObserver.observe(el));
+    } else {
+      // Fallback for older browsers
+      lazyElements.forEach(el => el.classList.add('loaded'));
+    }
+  }
+  
+  // Initialize on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLazyLoad);
+  } else {
+    initLazyLoad();
+  }
+</script>
+
+<style>
+  .lazy-load {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .lazy-load.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

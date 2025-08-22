@@ -1,0 +1,76 @@
+---
+// Performance monitoring component - only active in production
+const isProduction = import.meta.env.PROD;
+---
+
+{isProduction && (
+  <script>
+    // Core Web Vitals monitoring
+    function initPerformanceMonitoring() {
+      // Largest Contentful Paint
+      if ('web-vital' in window) {
+        import('https://unpkg.com/web-vitals@3/dist/web-vitals.js').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+          onCLS(console.log);
+          onFID(console.log);
+          onFCP(console.log);
+          onLCP(console.log);
+          onTTFB(console.log);
+        });
+      }
+      
+      // Basic performance metrics
+      window.addEventListener('load', () => {
+        const perfData = performance.getEntriesByType('navigation')[0];
+        const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+        const domContentLoaded = perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart;
+        
+        // Log performance metrics (in production, you'd send to analytics)
+        console.log('Performance Metrics:', {
+          loadTime,
+          domContentLoaded,
+          firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime,
+        });
+      });
+      
+      // Resource loading monitoring
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.duration > 1000) { // Resources taking longer than 1s
+            console.warn('Slow resource:', entry.name, entry.duration + 'ms');
+          }
+        }
+      });
+      
+      observer.observe({ entryTypes: ['resource'] });
+      
+      // Memory usage monitoring (if available)
+      if ('memory' in performance) {
+        setInterval(() => {
+          const memory = performance.memory;
+          if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.9) {
+            console.warn('High memory usage detected');
+          }
+        }, 30000); // Check every 30 seconds
+      }
+    }
+    
+    // Initialize monitoring
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPerformanceMonitoring);
+    } else {
+      initPerformanceMonitoring();
+    }
+  </script>
+)}
+
+<!-- Development performance hints -->
+{!isProduction && (
+  <script>
+    console.log('🚀 Performance tips:');
+    console.log('• Use lazy loading for images below the fold');
+    console.log('• Minimize JavaScript bundle size');
+    console.log('• Enable compression (gzip/brotli)');
+    console.log('• Use a CDN for static assets');
+    console.log('• Optimize images (WebP, AVIF)');
+  </script>
+)}

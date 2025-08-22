@@ -7,18 +7,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead 
+			title={SITE_TITLE} 
+			description={SITE_DESCRIPTION}
+			keywords={['AI', '数据分析', '教育技术', '在线学习', '智慧教育', '人工智能', 'LMS', '教学平台']}
+		/>
 	</head>
 	<body>
 		<Header />
-		<main >
-		<div class="text-center">
-			<h1>零一格物</h1>
-			<p class="text-center">
-				欢迎您访问零一格物网站。	
-			</p>
+		<main>
+			<div class="text-center">
+				<h1>零一格物</h1>
+				<p class="text-center">
+					欢迎您访问零一格物网站。在这里，数字是语言，AI是工具，我们认知世界，也重构世界。
+				</p>
+				<p class="text-center mt-4">
+					探索人工智能与教育技术的前沿研究，分享数据驱动的洞察与实践。
+				</p>
 			</div>
 		</main>
 		<Footer />

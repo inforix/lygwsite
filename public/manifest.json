@@ -1,0 +1,22 @@
+{
+  "name": "零一格物 - AI与数据分析专业博客",
+  "short_name": "零一格物",
+  "description": "在零一格物，数字是语言，AI是工具，我们认知世界，也重构世界。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "technology", "news"],
+  "lang": "zh-CN",
+  "scope": "/",
+  "screenshots": []
+}

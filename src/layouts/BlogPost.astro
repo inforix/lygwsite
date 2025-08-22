@@ -10,9 +10,17 @@ type Props = CollectionEntry<'blog'>['data'];
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="zh-CN">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead 
+			title={title} 
+			description={description} 
+			image={heroImage}
+			type="article"
+			publishedTime={pubDate.toISOString()}
+			modifiedTime={updatedDate?.toISOString()}
+			keywords={['AI', '数据分析', '教育技术', '在线学习', '智慧教育']}
+		/>
 		<style>
 			.hero-image {
 				max-width: 100%;
