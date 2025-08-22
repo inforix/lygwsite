@@ -42,16 +42,6 @@ export default defineConfig({
   vite: {
     build: {
       cssCodeSplit: true,
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'chart-libs': ['chart.js'],
-          }
-        }
-      }
-    },
-    optimizeDeps: {
-      include: ['chart.js']
     }
   },
 });

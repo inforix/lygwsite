@@ -1,0 +1,79 @@
+---
+// 仅在开发环境显示
+if (import.meta.env.PROD) {
+  return Astro.redirect('/');
+}
+
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <BaseHead 
+      title="SEO状态检查" 
+      description="网站SEO优化状态检查"
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="max-w-4xl mx-auto px-4 py-8">
+      <h1 class="text-3xl font-bold mb-8">SEO优化状态</h1>
+      
+      <div class="bg-green-50 p-6 rounded-lg mb-6">
+        <h2 class="text-xl font-semibold mb-4 text-green-800">✅ 已完成优化</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-green-700">
+          <div>
+            <h3 class="font-semibold mb-2">基础SEO</h3>
+            <ul class="space-y-1 text-sm">
+              <li>✓ robots.txt</li>
+              <li>✓ XML sitemap</li>
+              <li>✓ Meta标签</li>
+              <li>✓ Canonical URLs</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2">结构化数据</h3>
+            <ul class="space-y-1 text-sm">
+              <li>✓ JSON-LD</li>
+              <li>✓ Open Graph</li>
+              <li>✓ Twitter Cards</li>
+              <li>✓ 语言标记</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2">性能优化</h3>
+            <ul class="space-y-1 text-sm">
+              <li>✓ 图片懒加载</li>
+              <li>✓ CSS优化</li>
+              <li>✓ 资源预加载</li>
+              <li>✓ 压缩优化</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold mb-2">用户体验</h3>
+            <ul class="space-y-1 text-sm">
+              <li>✓ PWA支持</li>
+              <li>✓ 404页面</li>
+              <li>✓ 响应式设计</li>
+              <li>✓ 无障碍访问</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 p-6 rounded-lg">
+        <h2 class="text-xl font-semibold mb-4 text-blue-800">📊 SEO工具</h2>
+        <div class="space-y-2">
+          <p><a href="/sitemap.xml" class="text-blue-600 hover:underline" target="_blank">站点地图</a></p>
+          <p><a href="/robots.txt" class="text-blue-600 hover:underline" target="_blank">robots.txt</a></p>
+          <p><a href="/rss.xml" class="text-blue-600 hover:underline" target="_blank">RSS订阅</a></p>
+          <p><a href="/manifest.json" class="text-blue-600 hover:underline" target="_blank">PWA清单</a></p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
