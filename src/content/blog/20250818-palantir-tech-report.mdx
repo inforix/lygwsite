@@ -1,8 +1,10 @@
 ---
 title: "Palantir公司技术分析报告"
-description: "Palantir Technologies (NYSE: PLTR) 是一家成立于2003年的美国软件公司，专注于为大型机构提供大数据分析平台。自成立以来，Palantir便以其处理复杂、敏感数据的超凡能力，在政府、国防、情报及金融等关键领域树立了独特的市场地位和深远影响力。其技术常被外界视为神秘而强大，从协助美国政府进行反恐调查，到帮助企业优化供应链，Palantir的软件正成为现代机构决策中枢的“操作系统”。本报告旨在拨开迷雾，深入剖析Palantir的技术内核、核心平台架构、关键创新点及其在各行业的具体应用，以期提供一份客观、全面的技术评估。"
+description: >
+  Palantir Technologies (NYSE: PLTR) 是一家成立于2003年的美国软件公司，专注于为大型机构提供大数据分析平台。自成立以来，Palantir便以其处理复杂、敏感数据的超凡能力，在政府、国防、情报及金融等关键领域树立了独特的市场地位和深远影响力。其技术常被外界视为神秘而强大，从协助美国政府进行反恐调查，到帮助企业优化供应链，Palantir的软件正成为现代机构决策中枢的"操作系统"。本报告旨在拨开迷雾，深入剖析Palantir的技术内核、核心平台架构、关键创新点及其在各行业的具体应用，以期提供一份客观、全面的技术评估。
 pubDate: "2025-08-18"
 heroImage: "/palantir_tech.webp"
+author: "WANG Yuping"
 ---
 
 <head>
@@ -220,7 +222,7 @@ heroImage: "/palantir_tech.webp"
   <img
     alt="Palantir AIP for Defense 界面"
     src="https://picture-search.tiangong.cn/image/rt/0aac3938ffdf1a99c9df412b5551342f.jpg"
-    style="max-height: 280px; max-width: 100%;"
+    class="blog-image-constrained"
   />
   <figcaption>
     Palantir为国防领域提供的AIP界面，集成了地图态势、情报分析和任务规划功能，体现了Gotham的设计理念
@@ -433,7 +435,7 @@ heroImage: "/palantir_tech.webp"
 <li><strong>云部署架构</strong>: 在公有云上部署时，Palantir充分利用了云服务商提供的高可用性基础设施。例如，其在Oracle云基础设施（OCI）上的部署架构图显示，系统被部署在多个可用区（Availability Domains, ADs）和每个可用区内的多个故障域（Fault Domains, FDs）中。这意味着即使整个数据中心发生故障，服务依然可以继续运行。</li>
 </ul>
 <figure>
-<img alt="Palantir Foundry在Oracle云基础设施（OCI）上的部署架构图" src="https://picture-search.tiangong.cn/image/rt/83adbabec3123eec239ec4da161f69c9.jpg" style="max-height: 280px; max-width: 100%;"/>
+<img alt="Palantir Foundry在Oracle云基础设施（OCI）上的部署架构图" src="https://picture-search.tiangong.cn/image/rt/83adbabec3123eec239ec4da161f69c9.jpg" class="blog-image-constrained"/>
 <figcaption>Palantir Foundry与AIP在Oracle云基础设施（OCI）上的高可用部署架构，展示了其如何利用多可用区和故障域来确保系统韧性</figcaption>
 </figure>
 <h4>性能伸缩</h4>
@@ -467,7 +469,7 @@ heroImage: "/palantir_tech.webp"
 <ul>
 <li>
 <strong>Swiss Re (瑞士再保险)</strong>: 全球领先的再保险公司Swiss Re通过实施Palantir Foundry，对其数据资产进行了全面整合。根据<a href="https://nucleusresearch.com/research/single/roi-case-study-palantir-at-swiss-re/">Nucleus Research发布的ROI案例研究</a>，该项目取得了惊人的成果：
-                <div class="chart-container" id="canvas-parent-1" style="height: 250px;" data-sk-source-type="web_search" data-sk-source-container="chart" data-sk-source-id="YC7J0H">
+                <div class="chart-container chart-container-250" id="canvas-parent-1" data-sk-source-type="web_search" data-sk-source-container="chart" data-sk-source-id="YC7J0H">
 <canvas id="swissReRoiChart"></canvas>
 </div>
 
@@ -487,7 +489,7 @@ heroImage: "/palantir_tech.webp"
 <h2 id="section-market-competition">市场定位与技术竞争力分析</h2>
 <p>Palantir在一个竞争激烈的数据与分析市场中运营，其主要竞争对手包括数据湖仓一体化平台Databricks、云数据仓库Snowflake以及传统分析巨头SAS等。然而，Palantir凭借其独特的技术架构和市场策略，构建了难以复制的竞争壁垒。</p>
 <h3 id="section-competitor-comparison">与主要竞争对手的技术对比</h3>
-<div class="chart-container" id="canvas-parent-2" style="height: 400px;" data-sk-source-container="chart" data-sk-source-id="AN1BLS" data-sk-source-type="web_search">
+<div class="chart-container chart-container-400" id="canvas-parent-2" data-sk-source-container="chart" data-sk-source-id="AN1BLS" data-sk-source-type="web_search">
 <canvas id="marketShareChart"></canvas>
 </div>
 

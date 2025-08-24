@@ -1,0 +1,77 @@
+/* Blog-specific styles extracted from inline CSS for better caching */
+
+/* Chart container height variations */
+.chart-container-250 {
+  height: 250px !important;
+}
+
+.chart-container-400 {
+  height: 400px !important;
+}
+
+.chart-container-500 {
+  height: 500px !important;
+}
+
+.chart-container-550 {
+  height: 550px !important;
+}
+
+/* Image styles for blog posts */
+.blog-image-constrained {
+  max-height: 280px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Table cell styles */
+.table-center-text {
+  text-align: center;
+}
+
+/* Blog post hero image */
+.hero-image {
+  max-width: 100%;
+}
+
+.hero-image img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  height: auto;
+  max-width: 1020px;
+}
+
+/* Blog post title */
+.blog-title {
+  margin-bottom: 1em;
+  padding: 1em 0;
+  text-align: center;
+  line-height: 1;
+}
+
+.blog-title h1 {
+  margin: 0 0 0.5em 0;
+}
+
+/* Date styling */
+.blog-date {
+  margin-bottom: 0.5em;
+  color: rgb(var(--gray));
+}
+
+.last-updated-on {
+  font-style: italic;
+}
+
+/* Reference item styling (enhanced from global) */
+.blog-reference-item {
+  display: flex;
+}
+
+.blog-reference-item > div {
+  display: inline !important;
+}
