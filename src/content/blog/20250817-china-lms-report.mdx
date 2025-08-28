@@ -6,56 +6,7 @@ heroImage: "/lms.jpg"
 author: "WANG Yuping"
 ---
 
-<head>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body><div class="container">
-  <div class="toc">
-    <h3 id="section-0-1">目录</h3>
-    <ul>
-      <li>
-        <a href="#intro">引言：数字浪潮下的中国高等教育变革</a>
-      </li>
-      <li>
-        <a href="#market-overview">中国高校LMS市场概览与主要玩家</a>
-        <ul>
-          <li><a href="#section-market-landscape">市场格局：高度集中与激烈竞争并存</a></li>
-          <li><a href="#section-player-profiles">四大主流LMS平台画像</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#core-analysis">核心分析：中国高校LMS系统市场份额与应用深度</a>
-        <ul>
-          <li><a href="#section-market-share-analysis">市场份额分析：谁是真正的赢家？</a></li>
-          <li><a href="#section-tier-difference">分层院校LMS应用差异：从985到普通本科的选择逻辑</a></li>
-          <li><a href="#section-regional-distribution">区域分布特征：东-中-西部的数字化鸿沟与策略</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#functional-comparison">功能与生态对比：LMS平台的核心竞争力</a>
-        <ul>
-          <li><a href="#section-feature-matrix">功能矩阵深度对比</a></li>
-          <li><a href="#section-procurement-ecosystem">采购模式与生态策略</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#case-studies">案例分析：典型高校的LMS实践路径</a>
-        <ul>
-          <li><a href="#section-case-zju">案例一：顶尖综合性大学——浙江大学的“自建+集成”之路</a></li>
-          <li><a href="#section-case-zzu">案例二：地方综合性大学——郑州大学的“一体化平台”选择</a></li>
-          <li><a href="#section-case-scnu">案例三：行业特色院校——华南师范大学的“自主可控”探索</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#conclusion">总结与展望：迈向智能、融合与开放的未来</a>
-        <ul>
-          <li><a href="#section-core-conclusions">核心结论</a></li>
-          <li><a href="#section-future-trends">未来趋势展望</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
+
 
 <section id="intro">
 <h2 id="section-1">引言：数字浪潮下的中国高等教育变革</h2>
@@ -321,7 +272,7 @@ author: "WANG Yuping"
 </tbody>
 </table>
 <blockquote>
-<strong>核心洞察</strong>：<br/>
+<strong>核心洞察</strong>：
                 1. <strong>超星的普遍性</strong>：超星学习通在各层次、各区域院校中均展现出极高的渗透率，常常作为基础性、全校统一的教学管理平台出现，其采购名称常为“智慧教学平台”、“网络教学平台”等。<br/>
                 2. <strong>平台的复合型使用</strong>：顶尖高校，尤其是排名前列的985院校，极少依赖单一商业平台。它们更倾向于“自建核心平台 + 引入多个特色商业平台”的复合模式，以满足不同学院、不同课程的多元化和创新性教学需求。<br/>
                 3. <strong>采购名目的多样性</strong>：高校采购LMS的名目繁多，如“智慧教学平台”、“在线教育学习平台”、“教学质量管理平台”、“课程中心”等，但深入分析其供应商信息，会发现最终的服务提供商高度集中于少数几家头部企业。
@@ -458,6 +409,139 @@ author: "WANG Yuping"
 <li><strong>体验为王</strong>：系统的关注点将从LMS（学习管理系统）向LXP（学习体验平台）演进。这意味着平台设计将更加以师生为中心，关注用户界面的友好度、操作流程的便捷性以及个性化学习路径的实现，最终目标是提升每一位学习者的学习体验和成效。</li>
 </ul>
 </section>
-<script src="/scripts/20250817-china-lms-report-charts.js"></script>
+<script>{`
+// Chart for Overall Market Share
+function initializeCharts() {
+    const ctxMarketShare = document.getElementById('lmsMarketShareChart');
+    if (ctxMarketShare) {
+        new Chart(ctxMarketShare, {
+            type: 'doughnut',
+            data: {
+                labels: ['超星学习通', '自建平台', '智慧树', '学堂在线/雨课堂', '科大讯飞/其他'],
+                datasets: [{
+                    label: '主要LMS平台市场份额',
+                    data: [58.5, 18.9, 7.5, 9.4, 5.7],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(153, 102, 255, 0.8)',
+                        'rgba(255, 99, 132, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '抽样高校主要LMS平台使用分布 (%)',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+    }
 
-</body>
+    // Chart for Tier Preference
+    const ctxTierPreference = document.getElementById('tierPreferenceChart');
+    if (ctxTierPreference) {
+        new Chart(ctxTierPreference, {
+            type: 'bar',
+            data: {
+                labels: ['985/双一流院校', '211院校', '普通本科/双非院校'],
+                datasets: [
+                    {
+                        label: '超星学习通',
+                        data: [40, 65, 85],
+                        backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    },
+                    {
+                        label: '自建平台',
+                        data: [35, 15, 5],
+                        backgroundColor: 'rgba(75, 192, 192, 0.7)',
+                    },
+                    {
+                        label: '学堂在线/雨课堂',
+                        data: [15, 10, 5],
+                        backgroundColor: 'rgba(153, 102, 255, 0.7)',
+                    },
+                    {
+                        label: '智慧树/其他',
+                        data: [10, 10, 5],
+                        backgroundColor: 'rgba(255, 159, 64, 0.7)',
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: {
+                            callback: function(value) {
+                                return value + '%'
+                            }
+                        }
+                    },
+                    y: {
+                        stacked: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '不同层次院校主要LMS平台选择偏好对比',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.x !== null) {
+                                    label += context.parsed.x + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    },
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+    }
+}
+
+// Initialize charts when DOM is loaded
+if (typeof window !== 'undefined') {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeCharts);
+    } else {
+        initializeCharts();
+    }
+}
+`}</script>
+

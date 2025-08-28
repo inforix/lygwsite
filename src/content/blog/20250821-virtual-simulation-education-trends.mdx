@@ -184,3 +184,81 @@ author: "WANG Yuping"
 4. **终极目标：虚实共生与全面育人**：必须清醒地认识到，虚拟仿真教学的最终目标并非要完全取代真实实验，而是要构建一个"以虚促实、虚实结合、以虚拓实"的智慧教育环境。在这个环境中，虚拟与现实相互补充、相互促进，共同服务于学生的全面发展。其根本目的，是利用技术的杠杆，最大限度地激发学生的学习潜能，培养其在未来智能时代所必需的创新思维、实践能力和解决复杂问题的综合素养，为建设创新型国家提供坚实的人才支撑。
 
 总而言之，由教育部推动的虚拟仿真教学创新实验室建设，不仅是一场深刻的技术革命，更是一场广泛的教育思想变革。它正引领中国高等教育与职业教育，稳步迈向一个更加智能、更加开放、更加个性化的新纪元。
+
+<script>{`
+function initializeCharts() {
+    const ctx = document.getElementById('disciplineChart').getContext('2d');
+    // 数据基于对参考资料中提及的各高校获批案例的归纳统计，为示意数据
+    const data = {
+        labels: ['工学', '医学', '理学', '农学', '经济管理学', '新文科（法、艺等）', '交叉学科'],
+        datasets: [{
+            label: '虚拟仿真教学创新实验室学科分布',
+            data: [35, 25, 12, 10, 8, 5, 5], // 百分比示意
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.8)',
+                'rgba(54, 162, 235, 0.8)',
+                'rgba(255, 206, 86, 0.8)',
+                'rgba(75, 192, 192, 0.8)',
+                'rgba(153, 102, 255, 0.8)',
+                'rgba(255, 159, 64, 0.8)',
+                'rgba(199, 199, 199, 0.8)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(199, 199, 199, 1)'
+            ],
+            borderWidth: 1
+        }]
+    };
+    const config = {
+        type: 'doughnut',
+        data: data,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: '虚拟仿真教学创新实验室学科分布趋势示意图 (2020-2025)',
+                    font: {
+                        size: 18
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed !== null) {
+                                label += context.parsed + '%';
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        },
+    };
+    new Chart(ctx, config);
+};
+
+// Initialize charts when DOM is loaded
+if (typeof window !== "undefined") {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initializeCharts);
+    } else {
+      initializeCharts();
+    }
+}
+
+`}</script>
