@@ -56,25 +56,7 @@
     line-height: 1.4;
   }
 
-  h1 {
-    font-size: 3.052em;
-  }
-
-  h2 {
-    font-size: 2.441em !important;
-  }
-
-  h3 {
-    font-size: 1.953em !important;
-  }
-
-  h4 {
-    font-size: 1.563em;
-  }
-
-  h5 {
-    font-size: 1.25em;
-  }
+  
 
   strong,
   b {
@@ -171,12 +153,35 @@
 
 @layer components {
   /* Ensure heading sizes are properly applied */
+  article h1,
+  main h1,
+  .prose h1 {
+    font-size: 3.052em;
+  }
+
+  article h2,
+  main h2,
+  .prose h2 {
+    font-size: 2.441em;
+  }
+
   article h3,
   main h3,
   .prose h3 {
-    font-size: 1.953em !important;
+    font-size: 1.953em;
   }
-  
+
+  article h4,
+  main h4,
+  .prose h4 {
+    font-size: 1.563em;
+  }
+
+  article h5,
+  main h5,
+  .prose h5 {
+    font-size: 1.25em;
+  }
   article p {
     margin: 1em 0;
   }
