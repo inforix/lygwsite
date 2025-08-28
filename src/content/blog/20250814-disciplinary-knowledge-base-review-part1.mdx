@@ -43,9 +43,63 @@ author: "WANG Yuping"
 一个值得关注的趋势是，高校机构知识库（IR）正逐渐成为校内学术成果的汇聚中心。根据一项对国内外高校IR建设的文献计量分析，IR的研究热点已从早期的平台构建、开放获取，转向了[知识组织、数据管理和用户服务等更侧重“使用”的层面](https://pdf.hanspub.org/ass2025143_122398111.pdf)。这表明，一个成熟的IR平台，如[北京大学的机构知识库](https://www.lib.pku.edu.cn/2xxzzfw/25sjfw/index.htm)，可以作为构建学科知识库的坚实基础和核心数据来源。
 
 
-
-
-![图1：国内外高校机构知识库研究发文量趋势（示意图）](https://files.mdnice.com/user/5873/5d8fd850-fa97-4113-aa96-9dc8e1bb243c.png)
+<div class="chart-container">
+<div id="ir-trends-chart" style="width: 100%; height: 100%;"></div>
+</div>
+<p class="figure-caption">图1：国内外高校机构知识库研究发文量趋势（示意图）</p>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<script>{`
+document.addEventListener('DOMContentLoaded', function() {	
+            var chartDom = document.getElementById('ir-trends-chart');
+            var myChart = echarts.init(chartDom);
+            var option;
+            // Data estimated from the description in the Hanspub paper
+            option = {
+                title: {
+                    text: '国内外高校机构知识库(IR)研究发文量趋势',
+                    subtext: '数据来源：汉斯出版社《国内外高校机构知识库建设的文献计量分析》',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data: ['国内发文量', '国外发文量'],
+                    top: 60
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['2004', '2006', '2008', '2010', '2012', '2014', '2015', '2016', '2018', '2019', '2020', '2022', '2024']
+                },
+                yAxis: {
+                    type: 'value',
+                    name: '发文量（篇）'
+                },
+                series: [
+                    {
+                        name: '国内发文量',
+                        type: 'line',
+                        smooth: true,
+                        data: [0, 2, 15, 35, 30, 55, 58, 45, 30, 28, 25, 22, 20]
+                    },
+                    {
+                        name: '国外发文量',
+                        type: 'line',
+                        smooth: true,
+                        data: [2, 5, 8, 15, 18, 20, 22, 25, 24, 32, 28, 26, 25]
+                    }
+                ]
+            };
+            myChart.setOption(option);
+});
+`}</script>
 
 
 | 来源类别 | 具体示例 | 特点与价值 |

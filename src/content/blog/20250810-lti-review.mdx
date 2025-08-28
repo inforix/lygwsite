@@ -29,9 +29,10 @@ LTI标准的发展并非一蹴而就，其演进路径清晰地反映了教育�
 
 为了应对这些挑战，1EdTech联盟在经过广泛的社区合作后，制定了明确的升级路线图。一个关键的决策是，将LTI 1.2和LTI 2.0版本定义为“遗留”规范，它们将不再位于推荐的升级路径上。官方推荐的升级路径是**从LTI 1.1直接迁移到LTI 1.3**。这一决策背后，是市场对基于OAuth 2.0的现代化安全模型的强烈需求，以及对一个更简洁、更具扩展性的核心框架的共识。
 
-
-![图1: LTI标准演进路线图](https://files.mdnice.com/user/5873/8fa63844-44bc-4fd9-a801-89ee0062c351.png)
-
+<div class="chart-container" id="canvas-parent-1" style="height: 450px;">
+<canvas id="ltiEvolutionChart"></canvas>
+</div>
+<figcaption style="text-align: center; margin-top: -1.5em; margin-bottom: 2em;">图1: LTI标准演进路线图</figcaption>
 
 这一战略性的演进，将我们引向了本报告的核心主题：LTI 1.3是当前所有LTI集成的技术基石，它以全新的安全框架为核心；而LTI Advantage则是建立在该基石之上的增值服务包，它通过一系列强大的服务，将工具集成的深度和广度提升到了前所未有的高度。二者共同构成了推动高等教育数字化转型，实现从“互联互通”到“深度融合”的关键驱动力。
 
@@ -73,9 +74,10 @@ LTI 1.3最根本的改进是摒弃了LTI 1.1中使用的OAuth 1.0a签名方式�
 
 一个典型的LTI 1.3资源启动流程（Resource Link Launch）可以分解为以下几个关键步骤，这个流程完美地融合了OIDC和JWT：
 
-
-![图2: LTI 1.3 启动流程时序图 (简化版)](https://files.mdnice.com/user/5873/1e333d0e-1de3-480a-b641-6e9a56228d44.png)
-
+<div class="chart-container" id="canvas-parent-2" style="height: 600px;">
+<canvas id="ltiLaunchFlowChart"></canvas>
+</div>
+<figcaption style="text-align: center; margin-top: -1.5em; margin-bottom: 2em;">图2: LTI 1.3 启动流程时序图 (简化版)</figcaption>
 
 **流程详解：**
 
@@ -166,7 +168,7 @@ LTI 1.3最根本的改进是摒弃了LTI 1.1中使用的OAuth 1.0a签名方式�
     
 *   **价值体现：** 整个过程，王教授几乎没有离开过Canvas的操作环境。对学生而言，他们看到的不再是三个泛泛的工具入口，而是一个结构化的学习单元，包含了教材阅读、仿真实验和视频学习，学习体验无缝且专注。这极大地降低了认知负荷，提升了学习效率。
 
-![Panopto视频库集成界面](https://picture-search.tiangong.cn/image/rt/57bdeab962dc7f86806f81635097b3e3.jpg)
+![Panopto视频库集成界面](/images/posts/20250810-57bdeab962dc7f86806f81635097b3e3.jpg)
 
 通过LTI集成在LMS中的Panopto视频库，教师可使用Deep Linking轻松嵌入特定视频或播放列表
 
@@ -216,7 +218,7 @@ LTI 1.3最根本的改进是摒弃了LTI 1.1中使用的OAuth 1.0a签名方式�
 
 在LMS中注册一个新的LTI 1.3工具，虽然比1.1版本涉及更多安全参数，但流程是标准化的。
 
-![LTI 1.3工具配置界面](https://picture-search.tiangong.cn/image/rt/4c3701e42ee3525e14a018c9def5179f.jpg)
+![LTI 1.3工具配置界面](/images/posts/20250810-4c3701e42ee3525e14a018c9def5179f.jpg)
 
 在LMS中手动配置LTI 1.3工具时，需要填写Tool URL、选择LTI版本并配置公钥等安全信息
 
@@ -286,7 +288,7 @@ LTI的成功，本质上是一个网络效应的成功。随着越来越多的�
 *   **个性化学习伴侣：** 学生在遇到学习困难时，可以直接在LMS中与AI导师互动，获得即时解答、概念解释和学习路径建议。
 *   **智能化评估与反馈：** AI工具可以通过LTI读取学生提交的作业（如论文或代码），进行自动评估，并提供富有建设性的反馈，极大地减轻教师的批改负担，同时为学生提供更及时的指导。
 
-![集成在LMS中的Google AI工具](https://picture-search.tiangong.cn/image/rt/9f09c846c9d2b2710ed085b0e4c35438.jpg)
+![集成在LMS中的Google AI工具](/images/posts/20250810-9f09c846c9d2b2710ed085b0e4c35438.jpg)
 
 通过LTI集成的AI工具（如Google Gemini）可直接在LMS中为教师提供生成课程大纲、测验、教学活动等智能化支持
 
@@ -312,3 +314,149 @@ LTI 1.3与LTI Advantage的战略价值，对于生态系统中的不同角色而
 ### 4.2 最终展望
 
 展望未来，LTI标准不仅仅是一套技术规范，它更是实现未来个性化、智能化、数据驱动的高等教育愿景的战略性基础设施。随着AI技术的深度融合和学习分析应用的普及，LTI作为安全、标准化的“数据管道”和“服务总线”的地位将愈发重要。对于任何一所致力于在数字化浪潮中保持领先地位的高等教育机构而言，积极拥抱、部署并优先选择支持LTI 1.3及LTI Advantage的工具和平台，不再是一个可选项，而是迈向未来教育、构建下一代数字学习新生态的关键一步。
+
+<script>{`
+document.addEventListener('DOMContentLoaded', function () {
+        // Chart.js for LTI Evolution Timeline
+        const ctxEvolution = document.getElementById('ltiEvolutionChart').getContext('2d');
+        new Chart(ctxEvolution, {
+            type: 'bar',
+            data: {
+                labels: ['LTI 1.1 (2011)', 'LTI 1.2 / 2.0 (Legacy)', 'LTI 1.3 (2019)', 'LTI Advantage'],
+                datasets: [{
+                    label: '核心特性',
+                    data: [1, 0.5, 2, 3], // Arbitrary values for height
+                    backgroundColor: [
+                        'rgba(255, 159, 64, 0.6)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(75, 192, 192, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'LTI标准演进与核心特性',
+                        font: { size: 18 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (context.parsed.y !== null) {
+                                    let features = '';
+                                    switch(context.label) {
+                                        case 'LTI 1.1 (2011)': features = '基础启动, 简单成绩回传 (OAuth 1.0a)'; break;
+                                        case 'LTI 1.2 / 2.0 (Legacy)': features = '被弃用, 不在推荐升级路径'; break;
+                                        case 'LTI 1.3 (2019)': features = '安全核心: OAuth 2.0, OIDC, JWT'; break;
+                                        case 'LTI Advantage': features = '服务套件: NRPS, AGS, Deep Linking'; break;
+                                    }
+                                    label = features;
+                                }
+                                return label;
+                            }
+                        }
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Chart.js for LTI 1.3 Launch Flow
+        const ctxLaunch = document.getElementById('ltiLaunchFlowChart').getContext('2d');
+        new Chart(ctxLaunch, {
+            type: 'bar',
+            data: {
+                labels: [
+                    '1. 用户点击LTI链接',
+                    '2. OIDC登录请求 (浏览器重定向)',
+                    '3. 工具重定向至平台授权端点',
+                    '4. 平台验证用户并授权',
+                    '5. 平台POST含id_token(JWT)的表单',
+                    '6. 工具验证JWT并展示内容'
+                ],
+                datasets: [
+                    {
+                        label: '用户浏览器',
+                        data: [1, 1, 1, 0, 1, 1],
+                        backgroundColor: 'rgba(255, 206, 86, 0.6)',
+                        stack: 'Stack 0',
+                    },
+                    {
+                        label: '平台 (LMS)',
+                        data: [1, 1, 0, 1, 1, 0],
+                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                        stack: 'Stack 1',
+                    },
+                    {
+                        label: '工具 (Tool)',
+                        data: [0, 1, 1, 0, 1, 1],
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        stack: 'Stack 2',
+                    }
+                ]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'LTI 1.3 启动流程中的角色交互',
+                        font: { size: 18 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let role = context.dataset.label;
+                                let step = context.label;
+                                let action = '';
+                                switch(step) {
+                                    case '1. 用户点击LTI链接': action = '平台: 接收点击事件'; break;
+                                    case '2. OIDC登录请求 (浏览器重定向)': action = '平台 -> 工具: 发起登录请求'; break;
+                                    case '3. 工具重定向至平台授权端点': action = '工具 -> 平台: 请求授权'; break;
+                                    case '4. 平台验证用户并授权': action = '平台: 内部处理'; break;
+                                    case '5. 平台POST含id_token(JWT)的表单': action = '平台 -> 工具: 发送身份令牌'; break;
+                                    case '6. 工具验证JWT并展示内容': action = '工具: 内部处理'; break;
+                                }
+                                if (context.raw > 0) {
+                                    return role + '参与此步骤: ' + action;
+                                }
+                                return null;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        display: false,
+                    },
+                    y: {
+                        stacked: true,
+                    }
+                }
+            }
+        });
+});
+`}</script>

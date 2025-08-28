@@ -47,10 +47,6 @@ Panopto提供简洁的界面供用户选择分享整个屏幕、特定窗口或�
 
 视频的价值不仅在于记录，更在于其能否有效传递信息并引发观众的深度参与。Panopto通过在线编辑和互动工具，将静态的视频转化为动态的学习体验。
 
-
-![](https://files.mdnice.com/user/5873/706c5a95-29e8-407c-8115-4af3f7ea6a81.png)
-
-
 * **非破坏性在线编辑**：Panopto的网页编辑器非常易于使用，即使是视频编辑新手也能快速上手。它可以实现剪切多余片段、合并多个视频、在时间轴上插入新的幻灯片或PDF文档等操作。所有编辑都是“非破坏性”的，意味着原始视频文件始终保持不变，用户可以随时撤销修改或恢复到任意版本。
 
 *   **嵌入式互动元素**：为了提升学习效果，教师或培训师可以在视频的任意时间点嵌入互动式测验（支持单选、多选、判断题）、投票或调查问卷。这些测验的结果可以直接与LMS的成绩管理集成，形成学习效果的闭环反馈。
@@ -82,6 +78,7 @@ Panopto提供两种灵活的部署选项，以满足不同机构的安全和管�
 作为企业级平台，Panopto将安全性置于最高优先级，并遵循严格的行业标准和法规。
 
 *   **数据加密**：Panopto采用业界领先的加密标准保护数据安全。所有静态存储的视频文件均使用AES-256标准进行加密；所有在传输过程中的数据则通过TLS 1.3协议进行加密，有效防止数据在传输过程中被窃取或篡改。
+
 *   **合规认证**：Panopto致力于满足全球性的合规要求。平台设计遵守欧盟的《通用数据保护条例》（GDPR）。同时，为了确保内容对所有用户（包括残障人士）的可用性，平台遵循美国的ADA Section 508无障碍访问标准。更重要的是，Panopto每年都会通过由独立第三方会计师事务所执行的SOC 2 Type II审计，该审计验证了其在安全性、可用性和保密性方面的控制措施是有效且持续运行的。
 
 #### 1.2.3 API与可扩展性
@@ -163,7 +160,9 @@ Panopto同样将教育领域的成功经验扩展到了企业市场，帮助企�
 *   **LTI 1.3** (及LTI Advantage)：这是当前和未来的主流标准，代表了一次彻底的架构升级。Panopto已全面支持并推荐用户采用LTI 1.3（[Panopto LTI 1.3支持说明](https://support.panopto.com/s/article/Learn-About-Panopto-Support-for-LTI)）。其核心优势在于：
 
     *   **更高的安全性**：LTI 1.3放弃了静态的共享密钥，转而采用基于行业标准**OAuth 2.0**和**JSON Web Tokens (JWT)**的现代安全框架。这提供了一个更安全、更动态的认证和授权机制，显著降低了安全风险。
+
     *   **更强的功能性**：LTI 1.3之上构建了一套名为“LTI Advantage”的服务，提供了更丰富的功能。例如，“成绩服务”（Assignment and Grade Services）允许Panopto等工具更可靠、更灵活地将成绩（如视频观看完成度、测验分数）回传至LMS成绩簿。“深度链接”（Deep Linking）则允许教师在LMS的内容编辑器中直接浏览并嵌入Panopto中的特定视频或播放列表，体验远胜于LTI 1.1。
+    
     *   **未来的发展方向**：IMS Global已宣布弃用LTI 1.1，所有LMS厂商和工具提供商都在积极转向LTI 1.3。Panopto明确表示，未来更多独有的LMS集成新功能将只在LTI 1.3的基础上开发。因此，升级到LTI 1.3不仅是安全性的需要，更是拥抱未来技术发展的必然选择。
 
 
@@ -200,6 +199,7 @@ Blackboard是另一大LMS巨头，Panopto同样提供了强大的集成方案，
     *   **深度成绩中心集成**：Panopto视频中的测验成绩可以无缝回传到Blackboard的成绩中心（Grade Center），这是其集成的一大亮点。
     
     *   **内容市场工具**：教师可以在课程的“内容市场”中轻松找到并添加Panopto视频内容。
+
     *   **批量课程配置**：管理员可以方便地为大量课程批量启用和配置Panopto集成。
     
 *   **实施要点**：集成过程涉及在Blackboard中注册LTI 1.3工具提供商，并在Panopto中进行相应配置。Panopto的文档详细说明了如何处理权限同步和用户映射（[Blackboard LTI 1.3集成设置指南](https://support.panopto.com/s/article/How-to-Set-Up-a-Blackboard-Ultra-Integration-with-LTI-1-3)）。
@@ -267,8 +267,77 @@ LMS集成的价值在众多客户的实践中得到了验证。
 *   **部署趋势**：在部署模式上，云部署（Cloud-Based）已占据绝对主导地位。Future Market Insights的报告指出，2025年云部署在北美企业视频市场中的份额预计将达到61.4%（[Future Market Insights报告](https://www.futuremarketinsights.com/reports/north-america-enterprise-video-market)）。云模式提供的灵活性、可扩展性和较低的初始投入，使其成为大多数企业的首选。
 
 
-![](https://files.mdnice.com/user/5873/76888209-95f6-46c7-896a-fcdc4a82aee7.png)
+<div class="chart-container" id="canvas-parent-1">
+<canvas id="marketGrowthChart"></canvas>
+</div>
+<script>{`
+document.addEventListener('DOMContentLoaded', function () {
 
+                        const ctx = document.getElementById('marketGrowthChart');
+                        if (!ctx) return;
+                        
+                        const labels = Array.from({length: 8}, (_, i) => 2025 + i);
+                        const initialValue = 25.11;
+                        const cagr = 0.172;
+                        const data = labels.map((_, i) => (initialValue * Math.pow(1 + cagr, i)).toFixed(2));
+
+                        new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: labels,
+                                datasets: [{
+                                    label: '全球企业视频平台市场规模 (单位：十亿美元)',
+                                    data: data,
+                                    borderColor: '#1a73e8',
+                                    backgroundColor: 'rgba(26, 115, 232, 0.1)',
+                                    fill: true,
+                                    tension: 0.1
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                plugins: {
+                                    title: {
+                                        display: true,
+                                        text: '全球企业视频平台市场规模预测 (2025-2032)',
+                                        font: { size: 18 }
+                                    },
+                                    tooltip: {
+                                        callbacks: {
+                                            label: function(context) {
+                                                let label = context.dataset.label || '';
+                                                if (label) {
+                                                    label += ': ';
+                                                }
+                                                if (context.parsed.y !== null) {
+                                                    label += '$' + context.parsed.y + ' B';
+                                                }
+                                                return label;
+                                            }
+                                        }
+                                    }
+                                },
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        title: {
+                                            display: true,
+                                            text: '市场规模 (十亿美元)'
+                                        }
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: '年份'
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    });
+
+`}</script>
 
 ### 3.2 主要竞争对手横向对比
 

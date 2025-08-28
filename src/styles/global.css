@@ -61,11 +61,11 @@
   }
 
   h2 {
-    font-size: 2.441em;
+    font-size: 2.441em !important;
   }
 
   h3 {
-    font-size: 1.953em;
+    font-size: 1.953em !important;
   }
 
   h4 {
@@ -170,6 +170,13 @@
 }
 
 @layer components {
+  /* Ensure heading sizes are properly applied */
+  article h3,
+  main h3,
+  .prose h3 {
+    font-size: 1.953em !important;
+  }
+  
   article p {
     margin: 1em 0;
   }
