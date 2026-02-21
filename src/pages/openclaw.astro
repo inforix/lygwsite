@@ -53,28 +53,28 @@ import Layout from '../layouts/BlogPost.astro';
 	<p>
 		安装方式上我更喜欢 NPM，但它不一定一次成功；如果 NPM 不顺利，直接用官网提供的一条命令安装往往更省时间。对接渠道务必重视权限导入与授权流程。在部署时，飞书插件其实已经内置了，但是 OpenClaw 还要安装，此时可以忽略，直接修改 openclaw 文件，在 channels 部分增加 feishu：
 	</p>
-	<pre><code>"channels": {
-  "feishu": {
-    "accounts": {
-      "default": {
-        "appId": "cli_XXXXXX",
-        "appSecret": "YYYYYYYYYYY",
-        "domain": "feishu",
-        "enabled": true
-      }
-    },
-    "dmPolicy": "pairing",
-    "groupPolicy": "open",
-    "blockStreaming": true,
-    "groups": {}
-  }
-}</code></pre>
+	<pre><code>&quot;channels&quot;: &#123;
+  &quot;feishu&quot;: &#123;
+    &quot;accounts&quot;: &#123;
+      &quot;default&quot;: &#123;
+        &quot;appId&quot;: &quot;cli_XXXXXX&quot;,
+        &quot;appSecret&quot;: &quot;YYYYYYYYYYY&quot;,
+        &quot;domain&quot;: &quot;feishu&quot;,
+        &quot;enabled&quot;: true
+      &#125;
+    &#125;,
+    &quot;dmPolicy&quot;: &quot;pairing&quot;,
+    &quot;groupPolicy&quot;: &quot;open&quot;,
+    &quot;blockStreaming&quot;: true,
+    &quot;groups&quot;: &#123;&#125;
+  &#125;
+&#125;</code></pre>
 	<p>在 plugins 部分，别忘了设置 feishu 为启用：</p>
-	<pre><code>"plugins": {
-  "entries": {
-    "feishu": { "enabled": true }
-  }
-}</code></pre>
+	<pre><code>&quot;plugins&quot;: &#123;
+  &quot;entries&quot;: &#123;
+    &quot;feishu&quot;: &#123; &quot;enabled&quot;: true &#125;
+  &#125;
+&#125;</code></pre>
 
 	<h2>5. 选择模型</h2>
 	<p>
